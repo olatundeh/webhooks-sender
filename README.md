@@ -5,8 +5,8 @@ PHP script to process a queue of webhooks, adhering to an exponential backoff st
 Setup:
 1. Clone the Repository: git clone https://github.com/olatundeh/webhooks-sender.git
 2. Install Dependencies:
-cd webhooks-sender
-composer install
+- cd webhooks-sender
+- composer install
 3. Create a .env file in the project root and add the following variables:
 WEBHOOK_QUEUE_FILE=webhooks.txt
 MAX_FAILED_ATTEMPTS=5
