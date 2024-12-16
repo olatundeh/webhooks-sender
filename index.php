@@ -50,6 +50,7 @@ function processWebhookQueue($webhookQueueFile, $maxFailedAttempts, $maxRetryDel
                 $lines = file($webhookQueueFile, FILE_IGNORE_NEW_LINES);
                 $newLines = array_diff($lines, [$line]);
                 file_put_contents($webhookQueueFile, implode("\n", $newLines));
+                echo "Webhook sent successfully for order ID: $order_id, name: $name, event: $event\n";
                 break;
             }
 
